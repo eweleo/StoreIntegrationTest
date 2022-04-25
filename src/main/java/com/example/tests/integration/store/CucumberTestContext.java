@@ -7,6 +7,33 @@ public class CucumberTestContext {
     private int statusCode;
     private String body;
     private ResponseEntity response;
+    private ResponseEntity responseUser;
+    private ResponseEntity responseInventory;
+    private ResponseEntity responseOrder;
+
+    public ResponseEntity getResponseOrder() {
+        return responseOrder;
+    }
+
+    public void setResponseOrder(ResponseEntity responseOrder) {
+        this.responseOrder = responseOrder;
+    }
+
+    public ResponseEntity getResponseUser() {
+        return responseUser;
+    }
+
+    public void setResponseUser(ResponseEntity responseUser) {
+        this.responseUser = responseUser;
+    }
+
+    public ResponseEntity getResponseInventory() {
+        return responseInventory;
+    }
+
+    public void setResponseInventory(ResponseEntity responseInventory) {
+        this.responseInventory = responseInventory;
+    }
 
     public String getAddressUrl() {
         return addressUrl;

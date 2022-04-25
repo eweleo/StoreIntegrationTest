@@ -1,11 +1,25 @@
 package com.example.tests.integration.store.stories.model;
 
+import com.example.tests.integration.store.stories.jsonData.LocalDateTimeDeserializer;
+import com.example.tests.integration.store.stories.jsonData.LocalDateTimeSerializer;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 import java.time.LocalDateTime;
 
 public class Inventory {
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private int id;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Product product;
     private int quantity;
+
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private LocalDateTime dateTime;
 
     public int getId() {

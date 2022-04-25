@@ -1,11 +1,21 @@
 package com.example.tests.integration.store.stories.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.util.List;
 
 public class User {
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private int id;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String name;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String surname;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private List<Order> orders;
 
     public int getId() {

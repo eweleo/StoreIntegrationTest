@@ -1,15 +1,23 @@
 package com.example.tests.integration.store.stories.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 public class Product {
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private int id;
     private String name;
 
-    public Product() {
+    public Product(String name) {
     }
 
     public Product(int id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public Product() {
+
     }
 
     public int getId() {
