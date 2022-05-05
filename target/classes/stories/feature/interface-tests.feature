@@ -9,7 +9,6 @@ Feature: abc
       | "products"        |
       | "inventory"       |
       | "users"           |
-      | "orders"          |
       | "choice_products" |
 
 
